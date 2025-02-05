@@ -35,5 +35,17 @@ internal class TransacaoService
 
         return new StatusCodeResult(201);
     }
+
+    public void LimparTransacoes()
+    {
+        Trancacoes.Clear();
+    }
+
+    public List<Transacao> BuscarTransacoes(int intervaloBusca)
+    {
+        DateTimeOffset dataHoraIntervalo = DateTimeOffset.Now.AddSeconds(-intervaloBusca);
+
+        return Trancacoes.Where(transacao => transacao.dataHora > dataHoraIntervalo).ToList();
+    }
 }
 

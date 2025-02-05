@@ -9,7 +9,7 @@ using TransacoesAPI.Shared.Modelos.Entidades;
 
 namespace TransacoesAPI.Shared.Modelos.Services;
 
-internal class TransacaoService
+public class TransacaoService
 {
     private readonly ILogger<TransacaoService> _logger;
     public virtual List<Transacao> Trancacoes { get; set; } = new List<Transacao>();

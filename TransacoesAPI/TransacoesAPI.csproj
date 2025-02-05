@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TransacoesAPI.Shared.Modelos\TransacoesAPI.Shared.Modelos.csproj" />
+  </ItemGroup>
+
 </Project>

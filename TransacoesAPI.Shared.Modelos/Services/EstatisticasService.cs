@@ -9,11 +9,10 @@ namespace TransacoesAPI.Shared.Modelos.Services;
 
 public class EstatisticasService
 {
-    public virtual TransacaoService transacaoService { get; set; }
 
-    public Estatisticas CalcularEstatisticasTransacoes(int intervaloBusca)
+    public Estatisticas CalcularEstatisticasTransacoes(int intervaloBusca, TransacaoService transacao)
     {
-        List<Transacao> transacoes = transacaoService.BuscarTransacoes(intervaloBusca);
+        List<Transacao> transacoes = transacao.BuscarTransacoes(intervaloBusca);
 
         if (!transacoes.Any())
         {

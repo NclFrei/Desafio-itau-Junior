@@ -25,6 +25,7 @@ public class TransacaoService
         }
 
         Console.Write("Transação feita com sucesso");
+
         Trancacoes.Add(transacao);
     }
 

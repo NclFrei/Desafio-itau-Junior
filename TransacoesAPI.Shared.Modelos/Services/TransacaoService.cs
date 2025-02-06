@@ -30,6 +30,7 @@ public class TransacaoService
 
     public void LimparTransacoes()
     {
+        Console.Write("Transação apagadas com sucesso");
         Trancacoes.Clear();
     }
 

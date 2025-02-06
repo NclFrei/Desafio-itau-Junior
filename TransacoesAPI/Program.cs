@@ -1,7 +1,10 @@
 using System.Text.Json.Serialization;
 using TransacoesAPI.Endpoints;
+using TransacoesAPI.Shared.Modelos.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<TransacaoService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
